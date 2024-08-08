@@ -9,7 +9,7 @@ import { useSelection } from "utils/use_selection_hook";
 import { useEffect, useState } from "react";
 import { useInterval } from "./useInterval";
 
-const API_KEY = "1WQZ4H973D41YRG8QTTK8BGHP9H2";
+const API_KEY = "YOUR API KEY HERE";
 
 const SurveyManagement = ({ surveys, onSurveySelect, createSurvey, deleteSurvey }: { surveys: any[], onSurveySelect: (surveyName: string) => void, createSurvey: (surveyName: string) => void, deleteSurvey: (surveyName: string) => void }) => {
   const [newSurveyName, setNewSurveyName] = useState<string>('');
@@ -123,7 +123,7 @@ const PollManagement = ({ survey, onBack, addPollToSurvey, deletePollFromSurvey 
 
   useInterval(async () => {
     await updateGraphData();
-  }, 10000);
+  }, 5000);
 
   const updateGraphData = async () => {
     try {
